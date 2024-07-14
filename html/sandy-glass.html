@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandy-Glass</title>
+  <style>
+    /* this is needed for being able to drag window */
+    * {
+        -webkit-user-select: none;
+        -webkit-app-region: drag;
+    }
+    html, body, .timeglass-3d-container {
+      margin: 0;
+      height: 100%;
+      vertical-align: middle;
+      color:darkorchid;
+    }
+  </style>
+
+</head>
+
+<body id="glasses">
+  <div id="sandy3DGlass" class="timeglass-3d-container"></div>
+  <script src="../js/3D/three.min.js"></script>
+  <script src="../js/3D/timeglass-3d.js"></script>
+  <script>
+    require('../js/sandy-glass');
+  </script>
+</body>
+
+</html>

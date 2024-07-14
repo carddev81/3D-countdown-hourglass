@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandy-Glass Settings</title>
+    <link rel="stylesheet" type="text/css" href="../css/jquery.datetimepicker.css"/>
+    <link rel='stylesheet' href='../node_modules/spectrum-colorpicker/spectrum.css' />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        h5.draggable{
+            -webkit-user-select: none;
+            -webkit-app-region: drag;
+        }
+        .counter{
+                font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h5 class="card-header draggable">Sand-glass Settings</h5>
+        <div class="card-body">
+          <h5 class="card-title">Date/Time</h5>
+          <p class="card-text">Sets the timer for countdown. Current Setting: <span class="counter" id="dateAndTime"></span></p>
+          <input type="text" id="datetimepicker3"/>
+          <br /><br />
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Sand Color</h5>
+                  <p class="card-text">Choose your sand color.</p>
+                  <input id='sandColor' value='#cfcffe'/>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Glass Frame Color</h5>
+                  <p class="card-text">Choose glass frame color.</p>
+                  <input id='frameColor' value='darkorchid'/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div class="text-center"><button id="cancel" type="button" class="btn btn-outline-primary btn-lg selectable">CANCEL</button> <button id="default" type="button" class="btn btn-outline-primary btn-lg">DEFAULT</button> <button id="apply" type="button" class="btn btn-outline-primary btn-lg">APPLY</button></div>
+        </div>
+    </div>
+    <script>
+        window.$ = window.jQuery = require('../js/jquery/jquery');
+        DateFormatter = require('../js/jquery/php-date-formatter.min');
+    </script>
+    <script src="../js/jquery/jquery.mousewheel.js"></script>
+    <script src="../js/jquery/jquery.datetimepicker.js"></script>
+    <script src="../node_modules/spectrum-colorpicker/spectrum.js"></script>
+    <script>
+        require('../js/settings');
+    </script>
+</body>
+</html>
